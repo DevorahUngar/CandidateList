@@ -1,4 +1,4 @@
-namespace ShidduchNotebook.Web;
+namespace CandidateList.Web;
 
 public class Program
 {

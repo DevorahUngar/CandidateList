@@ -2,17 +2,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ShidduchNotebook.Data;
+using CandidateList.Data;
 
 #nullable disable
 
-namespace ShidduchNotebook.Data.Migrations
+namespace CandidateList.Data.Migrations
 {
     [DbContext(typeof(CandidateDataContext))]
-    partial class CandidateDataContextModelSnapshot : ModelSnapshot
+    [Migration("20240509234404_Inital")]
+    partial class Inital
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +24,7 @@ namespace ShidduchNotebook.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ShidduchNotebook.Data.Candidate", b =>
+            modelBuilder.Entity("CandidateList.Data.Candidate", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -49,7 +52,7 @@ namespace ShidduchNotebook.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PotentialSpouses");
+                    b.ToTable("PotentialCandidates");
                 });
 #pragma warning restore 612, 618
         }

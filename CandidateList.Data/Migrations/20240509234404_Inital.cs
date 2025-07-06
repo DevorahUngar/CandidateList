@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ShidduchNotebook.Data.Migrations
+namespace CandidateList.Data.Migrations
 {
     /// <inheritdoc />
     public partial class Inital : Migration
@@ -11,7 +11,7 @@ namespace ShidduchNotebook.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "PotentialSpouses",
+                name: "PotentialCandidates",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -25,7 +25,7 @@ namespace ShidduchNotebook.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PotentialSpouses", x => x.Id);
+                    table.PrimaryKey("PK_PotentialCandidates", x => x.Id);
                 });
         }
 
@@ -33,7 +33,7 @@ namespace ShidduchNotebook.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PotentialSpouses");
+                name: "PotentialCandidates");
         }
     }
 }

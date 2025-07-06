@@ -14,7 +14,7 @@ public class CandidateDataContextFactory : IDesignTimeDbContextFactory<Candidate
     {
         var config = new ConfigurationBuilder()
            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), 
-           $"..{Path.DirectorySeparatorChar}ShidduchNotebook.Web"))
+           $"..{Path.DirectorySeparatorChar}CandidateList.Web"))
            .AddJsonFile("appsettings.json")
            .AddJsonFile("appsettings.local.json", optional: true, reloadOnChange: true).Build();
 
