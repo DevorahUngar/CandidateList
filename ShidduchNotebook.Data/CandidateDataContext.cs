@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace ShidduchNotebook.Data;
+namespace CandidateList.Data;
 
 public class CandidateDataContext : DbContext
 {
@@ -24,5 +24,5 @@ public class CandidateDataContext : DbContext
         }
     }
 
-    public DbSet<Candidate> PotentialSpouses { get; set; }
+    public DbSet<Candidate> PotentialCandidates { get; set; }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShidduchNotebook.Data
+namespace CandidateList.Data
 {
     public class Candidate
     {

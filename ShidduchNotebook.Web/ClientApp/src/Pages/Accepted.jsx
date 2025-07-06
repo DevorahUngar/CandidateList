@@ -8,7 +8,7 @@ const Accepted = () => {
 
     useEffect(() => {
         const getAcceptedCandidates = async () => {
-            const { data } = await axios.get('/api/shidduch/saidyes')
+            const { data } = await axios.get('/api/candidate/accepted')
             setAcceptedCandidates(data)
         }
 

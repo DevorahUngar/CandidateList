@@ -8,7 +8,7 @@ const Pending = () => {
 
     useEffect(() => {
         const getPendingCandidates = async () => {
-            const { data } = await axios.get('/api/shidduch/researching')
+            const { data } = await axios.get('/api/candidate/pending')
             setPendingCandidates(data)
         }
 

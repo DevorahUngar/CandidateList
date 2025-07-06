@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
             <header>
                 <nav className="navbar navbar-expand-sm navbar-dark fixed-top bg-dark border-bottom box-shadow">
                     <div className="container">
-                        <a className="navbar-brand">ShidduchNotebook</a>
+                        <a className="navbar-brand">CandidateList</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">

@@ -14,7 +14,7 @@ const ViewDetails = () => {
 
     useEffect(() => {
         const getById = async () => {
-            const { data } = await axios.get(`/api/shidduch/turnthepage?id=${id}`)
+            const { data } = await axios.get(`/api/candidate/get-by-id?id=${id}`)
             setCandidate(data)
         }
 
@@ -22,7 +22,7 @@ const ViewDetails = () => {
     }, [])
 
     const decisionMade = async (decision) => {
-        await axios.post(`/api/shidduch/decisionmakingtime?id=${id}&&decision=${decision}`)
+        await axios.post(`/api/candidate/accept-or-reject?id=${id}&&decision=${decision}`)
         setStatus(decision)
         refreshCounts()
     }

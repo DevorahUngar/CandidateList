@@ -30,7 +30,7 @@ const AddCandidate = () => {
     }
 
     const onSubmitClick = async () => {
-        await axios.post('/api/shidduch/phonerang', {firstName, lastName, email, phoneNumber, notes})
+        await axios.post('/api/candidate/add', {firstName, lastName, email, phoneNumber, notes})
         navigate('/')
     }
 

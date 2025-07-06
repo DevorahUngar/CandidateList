@@ -13,13 +13,13 @@ const CandidateStatusComponent = (props) => {
     }, [])
 
     const refreshCounts = async () => {
-        const pending = await axios.get('/api/shidduch/researching')
+        const pending = await axios.get('/api/candidate/pending')
         setPendingCount(pending.data.length)
 
-        const rejected = await axios.get('/api/shidduch/saidno')
+        const rejected = await axios.get('/api/candidate/rejected')
         setRejectedCount(rejected.data.length)
 
-        const accepted = await axios.get('/api/shidduch/saidyes')
+        const accepted = await axios.get('/api/candidate/accepted')
         setAcceptedCount(accepted.data.length)
     }
 

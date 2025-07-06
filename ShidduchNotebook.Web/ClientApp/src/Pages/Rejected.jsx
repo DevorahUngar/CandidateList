@@ -8,7 +8,7 @@ const Rejected = () => {
 
     useEffect(() => {
         const getRejectedCandidates = async () => {
-            const { data } = await axios.get('/api/shidduch/saidno')
+            const { data } = await axios.get('/api/candidate/rejected')
             setRejectedCandidates(data)
         }
 

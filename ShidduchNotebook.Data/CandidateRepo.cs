@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShidduchNotebook.Data
+namespace CandidateList.Data
 {
-    public class ShidduchRepo
+    public class CandidateRepo
     {
         private readonly string _connectionString;
-        public ShidduchRepo(string connectionString)
+        public CandidateRepo(string connectionString)
         {
             _connectionString = connectionString;
         }
@@ -19,38 +19,38 @@ namespace ShidduchNotebook.Data
         public void Add(Candidate candidate)
         {
             var context = new CandidateDataContext(_connectionString);
-            context.PotentialSpouses.Add(candidate);
+            context.PotentialCandidates.Add(candidate);
             context.SaveChanges();
         }
 
         public List<Candidate> GetPending()
         {
             var context = new CandidateDataContext(_connectionString);
-            return context.PotentialSpouses.Where(p => p.Status == Status.Pending).ToList();
+            return context.PotentialCandidates.Where(p => p.Status == Status.Pending).ToList();
         }
 
         public List<Candidate> GetAccepted()
         {
             var context = new CandidateDataContext(_connectionString);
-            return context.PotentialSpouses.Where(p => p.Status == Status.Accepted).ToList();
+            return context.PotentialCandidates.Where(p => p.Status == Status.Accepted).ToList();
         }
 
         public List<Candidate> GetRejected()
         {
             var context = new CandidateDataContext(_connectionString);
-            return context.PotentialSpouses.Where(p => p.Status == Status.Rejected).ToList();
+            return context.PotentialCandidates.Where(p => p.Status == Status.Rejected).ToList();
         }
 
         public Candidate GetById(int id)
         {
             var context = new CandidateDataContext(_connectionString);
-            return context.PotentialSpouses.FirstOrDefault(p => p.Id == id);
+            return context.PotentialCandidates.FirstOrDefault(p => p.Id == id);
         }
 
         public void Decision(int id, string decision)
         {
             var context = new CandidateDataContext(_connectionString);
-            var candidate = context.PotentialSpouses.FirstOrDefault(p => p.Id == id);
+            var candidate = context.PotentialCandidates.FirstOrDefault(p => p.Id == id);
 
             if (decision == "Accepted")
             {
