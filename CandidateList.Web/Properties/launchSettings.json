@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "ShidduchNotebook.Web": {
+    "CandidateList.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
